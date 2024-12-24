@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const Nav = styled.nav`
+export const Nav = styled.nav.withConfig({
+  shouldForwardProp: (prop) => prop !== 'scrolled',
+})`
   position: fixed;
   width: 100%;
   top: 0;
@@ -36,7 +38,9 @@ export const MobileIcon = styled.div`
   }
 `;
 
-export const NavMenu = styled.div`
+export const NavMenu = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== 'isOpen',
+})`
   @media screen and (max-width: 768px) {
     position: absolute;
     top: 100%;
@@ -48,6 +52,7 @@ export const NavMenu = styled.div`
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 `;
+
 
 export const NavLinks = styled.div`
   display: flex;
