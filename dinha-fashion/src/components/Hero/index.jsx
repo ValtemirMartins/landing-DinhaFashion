@@ -1,5 +1,6 @@
 import 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
 import { HeroContainer, HeroContent, HeroTitle, HeroSubtitle, HeroButton } from './styles';
 
 const Hero = () => {
@@ -11,15 +12,17 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <HeroTitle>Dinha Fashion</HeroTitle>
-          <HeroSubtitle>Seu estilo, sua essência</HeroSubtitle>
-          <HeroButton
-            as={motion.button}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Explorar Coleção
-          </HeroButton>
+          <HeroTitle>Dinha Fashion Moda Praia</HeroTitle>
+          <HeroSubtitle>Você pode fazer tudo, ACREDITE!</HeroSubtitle>
+          <Link to="colecao" smooth={true} duration={500}>
+            <HeroButton
+              as={motion.button}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Explorar Coleção
+            </HeroButton>
+          </Link>
         </motion.div>
       </HeroContent>
     </HeroContainer>
