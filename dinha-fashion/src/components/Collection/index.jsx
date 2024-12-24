@@ -31,25 +31,25 @@ const Collection = () => {
       id: 5,
       name: 'Vestido Floral',
       price: 'R$ 199,90',
-      image: 'https://jesily.com.br/cdn/shop/files/KitModaPraiaVerao-Biquini_Saida4_384x.webp?v=1697036266'
+      image: 'https://produtgy.com.br/cdn/shop/products/KitModaPraiaVerao2023-Biquini_Saida20_700x.jpg?v=1671373242'
     },
     {
       id: 6,
       name: 'Conjunto Elegante',
       price: 'R$ 259,90',
-      image: 'https://m.media-amazon.com/images/I/51mEqnCP0pL._AC_SY1000_.jpg'
+      image: 'https://78139.cdn.simplo7.net/static/78139/sku/biquinis-asa-delta-biquini-asa-delta-marinho-c-pink-p-1675294623994.jpg'
     },
     {
       id: 7,
       name: 'Conjunto Elegante',
       price: 'R$ 259,90',
-      image: 'https://cdn.shopify.com/s/files/1/0671/5041/4120/files/S714b484124364ae49736014d7f2b89bel_480x480.jpg?v=1696877103'
+      image: 'https://milaestilo.com/cdn/shop/files/S4e70c7aa96c84c83b3011035b59c7816U.webp?v=1697031122'
     },
     {
       id: 8,
       name: 'Conjunto Elegante',
       price: 'R$ 259,90',
-      image: 'https://cdn.sistemawbuy.com.br/arquivos/44a1dfb848d25121298a2d4ddf18443a/produtos/65b8feab0c003/biquini_efeito_lipo-6-65b8feabc7458.jpg'
+      image: 'https://images-americanas.b2w.io/produtos/4019614491/imagens/biquini-fio-dental-com-tira-lateral-cortininha-com-bojo-moda-verao/4019624770_1_large.jpg'
     },
     
   ]
@@ -62,7 +62,7 @@ const Collection = () => {
           <Card
             key={product.id}
             as={motion.div}
-            whileHover={{ y: -10 }}
+            whileHover={{ y: -20 }}
             data-aos="fade-up"
           >
             <Image src={product.image} alt={product.name} />
