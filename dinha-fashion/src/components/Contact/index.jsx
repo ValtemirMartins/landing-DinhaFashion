@@ -19,7 +19,6 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    
     try {
       const response = await fetch('https://formspree.io/f/xjkvpgpg', {
         method: 'POST',
@@ -28,7 +27,6 @@ const Contact = () => {
           Accept: 'application/json'
         }
       });
-      
       if (response.ok) {
         alert('Mensagem enviada com sucesso!');
         e.target.reset();
@@ -39,6 +37,7 @@ const Contact = () => {
       alert(`Erro ao enviar mensagem. Tente novamente. ${error.message}`);
     }
   };
+
   return (
     <ContactContainer id="contato">
       <ContactContent>
@@ -46,6 +45,7 @@ const Contact = () => {
           as={motion.div}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
           viewport={{ once: true }}
         >
           <Title>Entre em Contato</Title>
@@ -88,6 +88,7 @@ const Contact = () => {
           as={motion.form}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
           onSubmit={handleSubmit}
         >
@@ -107,6 +108,7 @@ const Contact = () => {
             as={motion.button}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.4 }}
             type="submit"
           >
             Enviar Mensagem
