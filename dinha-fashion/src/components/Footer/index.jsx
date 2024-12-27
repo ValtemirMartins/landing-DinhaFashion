@@ -21,8 +21,8 @@ const Footer = () => {
         <FooterSection>
           <FooterTitle>Contato</FooterTitle>
           <p>Email: contato@dinhafashion.com</p>
-          <p>Telefone: (11) 99999-9999</p>
-          <p>Endereço: Rua da Moda, 123</p>
+          <p>Telefone: (22) 992058774</p>
+          <p>Endereço: Rua Espirito Santo, N3, casa B</p>
         </FooterSection>
       </FooterContent>
       
