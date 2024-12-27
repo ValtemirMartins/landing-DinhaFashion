@@ -38,12 +38,28 @@ export const Title = styled.h3`
   font-size: 1.2rem;
 `
 
-export const Price = styled.p`
-  padding: 0 1rem;
-  color: ${({ theme }) => theme.colors.primary};
-  font-weight: bold;
-  font-size: 1.1rem;
-`
+export const Price = styled.div`
+  margin: 10px 0;
+  
+  .retail, .wholesale {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+  }
+
+  .retail span:first-child {
+    color: #666;
+  }
+
+  .wholesale {
+    color: #2c5282;
+    font-weight: 500;
+  }
+
+  .wholesale span:first-child {
+    font-size: 0.9em;
+  }
+`;
 
 export const Button = styled.button`
   width: 100%;

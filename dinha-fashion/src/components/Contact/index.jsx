@@ -13,15 +13,32 @@ import {
   Input,
   TextArea,
   SubmitButton,
-  ContactMap
 } from './styles';
 
 const Contact = () => {
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add your form submission logic here
+    const formData = new FormData(e.target);
+    
+    try {
+      const response = await fetch('https://formspree.io/f/xjkvpgpg', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        alert('Mensagem enviada com sucesso!');
+        e.target.reset();
+      } else {
+        throw new Error('Erro no envio');
+      }
+    } catch (error) {
+      alert(`Erro ao enviar mensagem. Tente novamente. ${error.message}`);
+    }
   };
-
   return (
     <ContactContainer id="contato">
       <ContactContent>
@@ -32,13 +49,12 @@ const Contact = () => {
           viewport={{ once: true }}
         >
           <Title>Entre em Contato</Title>
-          
           <InfoItem>
             <FaMapMarkerAlt />
             <div>
               <h3>Localização</h3>
-              <p>Av. Beira Mar, 1000</p>
-              <p>Rio de Janeiro - RJ</p>
+              <p>Rua Espirito Santo, N6 casa B </p>
+              <p>Cabo Frio - RJ</p>
             </div>
           </InfoItem>
 
@@ -46,7 +62,7 @@ const Contact = () => {
             <FaWhatsapp />
             <div>
               <h3>WhatsApp</h3>
-              <p>(21) 99999-9999</p>
+              <p>(22) 992058774</p>
             </div>
           </InfoItem>
 
@@ -62,7 +78,7 @@ const Contact = () => {
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
-            <a href="https://wa.me/5521999999999" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5522992058774" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp />
             </a>
           </SocialLinks>
@@ -76,16 +92,16 @@ const Contact = () => {
           onSubmit={handleSubmit}
         >
           <FormGroup>
-            <Input type="text" placeholder="Nome" required />
+            <Input type="text" name="name" placeholder="Nome" required />
           </FormGroup>
           <FormGroup>
-            <Input type="email" placeholder="Email" required />
+            <Input type="email" name="email" placeholder="Email" required />
           </FormGroup>
           <FormGroup>
-            <Input type="tel" placeholder="Telefone" />
+            <Input type="tel" name="phone" placeholder="Telefone" />
           </FormGroup>
           <FormGroup>
-            <TextArea placeholder="Mensagem" required rows="5" />
+            <TextArea name="message" placeholder="Mensagem" required rows="5" />
           </FormGroup>
           <SubmitButton
             as={motion.button}
@@ -97,17 +113,6 @@ const Contact = () => {
           </SubmitButton>
         </ContactForm>
       </ContactContent>
-
-      <ContactMap>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.1185574749!2d-43.18!3d-22.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDU0JzAwLjAiUyA0M8KwMTAnNDguMCJX!5e0!3m2!1spt-BR!2sbr!4v1635789876543!5m2!1spt-BR!2sbr"
-          width="100%"
-          height="400"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-        />
-      </ContactMap>
     </ContactContainer>
   );
 };

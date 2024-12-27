@@ -1,12 +1,12 @@
 import 'react';
 import { motion } from 'framer-motion';
-import { 
-  AboutContainer, 
-  AboutContent, 
-  ImageSection, 
-  TextSection, 
-  Title, 
-  Description, 
+import {
+  AboutContainer,
+  AboutContent,
+  ImageSection,
+  TextSection,
+  Title,
+  Description,
   HighlightBox,
   StatsContainer,
   StatItem
@@ -18,8 +18,15 @@ const About = () => {
       <AboutContent>
         <ImageSection
           as={motion.div}
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -200 }}
+          whileInView={{ 
+            opacity: 1, 
+            x: 0,
+            transition: {
+              duration: 1.5,
+              ease: "easeOut"
+            }
+          }}
           viewport={{ once: true }}
         >
           <img src="https://www.deluxebiquinis.com.br/public-images/product/zoom-1105-F7223.jpg" alt="Nossa História" />
@@ -27,13 +34,20 @@ const About = () => {
 
         <TextSection
           as={motion.div}
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 200 }}
+          whileInView={{ 
+            opacity: 1, 
+            x: 0,
+            transition: {
+              duration: 1.5,
+              ease: "easeOut"
+            }
+          }}
           viewport={{ once: true }}
         >
           <Title>Nossa História</Title>
           <Description>
-            Desde 2015, a Dinha Fashion tem sido sinônimo de elegância e estilo na moda praia brasileira. 
+            Desde 2015, a Dinha Fashion tem sido sinônimo de elegância e estilo na moda praia brasileira.
             Nascemos do sonho de criar peças que celebram a beleza natural de cada mulher.
           </Description>
 
