@@ -27,7 +27,7 @@ const Footer = () => {
       </FooterContent>
       
       <FooterBottom>
-        <p>© 2024 Dinha Fashion. Todos os direitos reservados.</p>
+        <p>© 2024 Dinha Fashion. Todos os direitos reservados. Desenvolvido por DevWorks</p>
       </FooterBottom>
     </FooterContainer>
   );
