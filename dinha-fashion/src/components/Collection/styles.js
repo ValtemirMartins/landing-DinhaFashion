@@ -57,6 +57,7 @@ export const Price = styled.div`
   }
 
   .wholesale span:first-child {
+    margin-left: 20px;
     font-size: 0.9em;
   }
 `;
