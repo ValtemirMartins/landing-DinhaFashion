@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
 import { Container, Grid, Card, Image, Title, Price, Button } from './styles'
-import asaDeltaOncinha from '/public/images/foto01.jpeg'
-import calcaLacoCortininha from '/public/images/foto02.jpeg'
-import calcaFioDuploCortininha from '/public/images/foto03.jpeg'
-import calcaAsaDeltaCortininhaPreta from '/public/images/foto04.jpeg'
+import asaDeltaOncinha from '/images/foto01.jpeg'
+import calcaLacoCortininha from '/images/foto02.jpeg'
+import calcaFioDuploCortininha from '/images/foto03.jpeg'
+import calcaAsaDeltaCortininhaPreta from '/images/foto04.jpeg'
 
 const Collection = () => {
   const products = [
