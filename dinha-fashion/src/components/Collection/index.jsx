@@ -1,34 +1,39 @@
 import { motion } from 'framer-motion'
 import { Container, Grid, Card, Image, Title, Price, Button } from './styles'
+import asaDeltaOncinha from '/public/images/foto01.jpeg'
+import calcaLacoCortininha from '/public/images/foto02.jpeg'
+import calcaFioDuploCortininha from '/public/images/foto03.jpeg'
+import calcaAsaDeltaCortininhaPreta from '/public/images/foto04.jpeg'
 
 const Collection = () => {
   const products = [
     {
       id: 1,
-      name: 'Vestido Floral',
+      name: 'Conjunto Asa Delta e cortinha oncinha',
       retailPrice: 'R$ 199,90',
       wholesalePrice: 'R$ 159,90',
-      image: 'https://jesily.com.br/cdn/shop/files/KitModaPraiaVerao-Biquini_Saida4_384x.webp?v=1697036266'
+      image: asaDeltaOncinha
     },
     {
       id: 2,
-      name: 'Conjunto Elegante',
+      name: 'Conjunto Calça Laço Cortininha',
       retailPrice: 'R$ 259,90',
       wholesalePrice: 'R$ 209,90',
-      image: 'https://m.media-amazon.com/images/I/51mEqnCP0pL._AC_SY1000_.jpg'
+      image: calcaLacoCortininha
     },
-    {
-      name: 'Vestido Floral',
+    {  
+      id: 3,
+      name: 'Conjunto Calça Fio Duplo Cortininha',
       retailPrice: 'R$ 199,90',
       wholesalePrice: 'R$ 159,90',
-      image: 'https://cdn.shopify.com/s/files/1/0671/5041/4120/files/S714b484124364ae49736014d7f2b89bel_480x480.jpg?v=1696877103'
+      image: calcaFioDuploCortininha
     },
     {
       id: 4,
-      name: 'Conjunto Elegante',
+      name: 'Conjunto Calça Asa Delta Cortininha Preta',
       retailPrice: 'R$ 259,90',
       wholesalePrice: 'R$ 209,90',
-      image: 'https://cdn.sistemawbuy.com.br/arquivos/44a1dfb848d25121298a2d4ddf18443a/produtos/65b8feab0c003/biquini_efeito_lipo-6-65b8feabc7458.jpg'
+      image: calcaAsaDeltaCortininhaPreta
     },
     {
       id: 5,
